@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+    <title>Ejercicios de JS</title>
+    </head>
+<body>
+    <h1>
+        Ejercicios de JS
+    </h1>
+    <p>
+        Esta es una página donde resuelvo ejercicios básicos de JS
+    </p>
+    <a href="http://multimedia.uoc.edu/blogs/pw/es/2013/09/17/exercicis-de-javascript-iniciacio/">Link de ejercicios</a>
+    <h2>
+        Aquí los resultados
+    </h2>
+    <h3>
+        Ejercicio 1: "Escribe un programa de una sola línea que haga que aparezca en la pantalla un alert que diga “Hello World”."
+        <h4>
+            <p style="display: block; margin: 20px;">
+            El resultado de este ejercicio es el que aparece al abrir la página, que dice "Esta página dice Hello World!"
+        </h4>
+        <script>
+            alert('Hello World!');
+        </script>
+        
+    </h3>
+    <h3>
+        Ejercicio 2: "Escribe un programa de una sola línea que escriba en la pantalla un texto que diga “Hello World” (document.write)."
+<br>
+<h4>
+    <p style="margin: 20px;"></p>
+        <script>
+            document.write("<h2> Hello World!</h2>");
+        </script>
+        </p>
+</h4>
+    </h3>
+    <h3>
+        Ejercicio 3: "Escribe un programa de una sola línea que escriba en la pantalla el resultado de sumar 3 + 5."
+        <br> 
+        <h4> <p style="margin: 20px;">
+        <script>
+            let suma = 3 + 5; document.write('El resultado del ejercicio es: '+ suma);
+        </script>
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 4: "Escribe un programa de dos líneas que pida el nombre del usuario con un prompt y escriba un texto que diga “Hola nombreUsuario”"
+        <br>
+        <h4><p style="margin: 20px;">
+        <script>
+            let nombreUsuario = prompt('Hola! ¿Cuál es tu nombre?', "");
+                document.write('¡Hola '+ nombreUsuario + '!');
+        </script>
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 5: "Escribe un programa de tres líneas que pida un número, pida otro número y escriba el resultado de sumar estos dos números."
+        <br> <h4> <p style="margin: 20px;">
+        <script>              
+            let holis = prompt('Hola ' + nombreUsuario + ', vamos a hacer una suma ', 'OK');
+            if (holis == 'OK'){
+            let num1 = prompt('Ingresa un número', '');
+            let num2 = prompt('Ingresa otro número', '');
+                document.write('El resultado es: ' + (parseInt(num1)+parseInt(num2)));  
+            } else {
+                document.write('No seas flojo, escribe "OK"');
+            }
+        </script>
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 6:
+        <br>
+        <h4><p style="margin: 20px;">
+        <script>
+            prompt('Ahora vamos a ver que número es mayor', 'Siguiente');
+            let numMayor1 = prompt('Escribe un número', '');
+            let numMayor2 = prompt('Escribe otro número', '');
+            if (parseInt(numMayor1) > parseInt(numMayor2)){
+                document.write(numMayor1 + ' es mayor que ' + numMayor2);
+            } else if (parseInt(numMayor1) < parseInt(numMayor2)){
+                document.write(numMayor2 + ' es mayor que ' + numMayor1);
+            } else {
+                document.write('Los números son iguales!');
+            };
+        
+        </script>
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 7: Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.
+        <br>
+        <h4><p style="margin: 20px;">
+        <script>
+            prompt('Ahora vamos a ver cual de estos 3 números es mayor', 'Siguiente');
+            let numMayorY1 = prompt('Escribe un número', '');
+            let numMayorY2 = prompt('Escribe otro número', '');
+            let numMayorY3 = prompt('Escribe un tercer número', '');
+            if (parseInt(numMayorY1) > parseInt(numMayorY2) && parseInt(numMayorY3)){
+                document.write(numMayorY1 + ' es el número mayor');
+            } else if (parseInt(numMayorY2) > parseInt(numMayorY1) && parseInt(numMayorY3)){
+                document.write(numMayorY2 + ' es el mayor');
+            } else if (parseInt(numMayorY3) > parseInt(numMayorY2) && parseInt(numMayorY1)){
+                document.write(numMayorY3 + ' es el mayor');
+            };
+
+        </script> 
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 8: Escribe un programa que pida un número y diga si es divisible por 2
+        <br>
+        <h4><p style="margin: 20px;">
+        <script>
+            prompt('Ahora vamos a ver si un número es divisible por 2', 'Siguiente');
+            let numDivisiblePor2 = prompt('Escribe un número', '');
+            if ((parseInt(numDivisiblePor2)/2) == Number.isInteger()) {
+                document.write(numDivisiblePor2 + ' es divisible por 2');
+            } else {
+                document.write('No es divisible por 2');
+            };
+
+        </script>
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 9: Escribe un programa que pida una frase y escriba cuantas veces aparece la letra a
+        <br>
+        <h4>
+            <p style="display: block; margin: 20px;">
+        <script>
+            prompt('Ahora vamos a contar la cantidad de letras "a" en una frase', 'Siguiente');
+            let contarA = function () {
+                let cantidadDeA = "a"
+                let cont = 0
+                let frase = prompt('Escribe una frase', '');
+                for (let i = 0; i < frase.length; i++){
+                    if(frase[i] == cantidadDeA){
+                        cont++
+                    }
+                }
+                    return cont;
+            };
+            document.write('La cantidad de letras "a" es: ' + contarA());
+
+        </script>
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 10: Escribe un programa que pida una frase y escriba las vocales que aparecen
+        <br>
+        <h4>
+            <p style="display: block; margin: 20px;">
+            <script>
+           prompt('En este ejercicio, veremos las vocales que hay en una frase', 'Siguiente');
+            let queVocales = function () {
+                let vocales = ['a', 'e', 'i', 'o', 'u'];
+                let cuales = [];
+                let frase2 = prompt('Escribe una frase', '');
+                for (let i = 0; i < frase2.length; i++){
+                    if(vocales.indexOf(frase2[i]) !== -1){
+                        cuales.push(frase2[i]);
+                    }
+                }
+                    return cuales.join(', ');
+            };
+            document.write('Las vocales son: ' + queVocales());
+        </script>
+            </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 11: Escribe un programa que pida una frase y escriba cuántas de las letras que tiene son vocales
+        <br>
+        <h4>
+            <p style="display: block; margin: 20px;">
+        <script>
+           prompt('En este ejercicio, veremos cuantas vocales que hay en una frase', 'Siguiente');
+            let cuantasVocales = function () {
+                let vocales = ['a', 'e', 'i', 'o', 'u'];
+                let cuantas = 0;
+                let frase3 = prompt('Escribe una frase', '');
+                for (let i = 0; i < frase3.length; i++){
+                    if(vocales.indexOf(frase3[i]) !== -1){
+                        cuantas++;
+                    }
+                }
+                    return cuantas;
+            };
+            document.write('La cantidad de vocales son: ' + cuantasVocales());
+            
+        </script>
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 12: Escribe un programa que pida una frase y escriba cuántas veces aparecen cada una de las vocales
+        <br>
+        <h4>
+            <p style="display: block; margin: 20px;">
+        <script>
+            
+        </script>
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 13: 
+        <br>
+        <h4>
+            <p style="display: block; margin: 20px;">
+        <script>
+            
+        </script>
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 14: 
+        <br>
+        <h4>
+            <p style="display: block; margin: 20px;">
+        <script>
+            
+        </script>
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 15: 
+        <br>
+        <h4>
+            <p style="display: block; margin: 20px;">
+        <script>
+            
+        </script>
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 16: 
+        <br>
+        <h4>
+            <p style="display: block; margin: 20px;">
+        <script>
+            
+        </script>
+        </p>
+        </h4>
+    </h3>
+    <h3>
+        Ejercicio 17: 
+        <br>
+        <h4>
+            <p style="display: block; margin: 20px;">
+        <script>
+            
+        </script>
+        </p>
+        </h4>
+    </h3>
+
+</body>
+
+</html>
